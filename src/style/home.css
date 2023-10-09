@@ -1,0 +1,84 @@
+/* Styles pour la section vidéo d'ouverture */
+.video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-section video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+  }
+  
+  .video-overlay h1 {
+    font-size: 36px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Styles pour la section de contenu avec effet de parallaxe */
+  .content-section {
+    padding: 100px 0;
+    background-color: #1e1e1e; /* Couleur de fond sombre */
+    color: white; /* Couleur du texte */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Effet de parallaxe lors du défilement */
+  .content-section.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .parallax-image {
+    width: 300px; /* Largeur de l'image */
+    height: 200px; /* Hauteur de l'image */
+    margin-bottom: 20px; /* Marge en bas de l'image */
+  }
+  
+  .parallax-text h2 {
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .parallax-text p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  
+  /* Styles pour le lien "En savoir plus" */
+  .learn-more-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d1192e; /* Couleur du bouton */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .learn-more-link:hover {
+    background-color: #a51222; /* Couleur du bouton au survol */
+  }
+  
