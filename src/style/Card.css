@@ -1,0 +1,210 @@
+/* Réinitialisation des styles */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+
+
+
+/* Conteneur principal pour les cartes  */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3%;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+/* Styles pour la carte  */
+.card {
+   
+    width: 30%;
+    border-radius: 5px;
+    font-size: 1.1em;   
+    border: 20px solid #fcce19;  
+   /* background-image: url("../images/s-l400.jpg");  */ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+.legendaire{
+    background-image: url("../images/gold.jpg");
+
+}
+.luxe{
+    background-image: url('../images/vert.jpg');
+}
+.muscle{
+     background-image: url('../images/s-l400.jpg');
+     
+}
+.hypercar{
+     background-image: url('../images/stars-2643089_1280.jpg');
+}
+.supercar{
+    background-image: url('../images/space-911785_1280.jpg');
+}
+.film{
+    background-image: url('../images/film.jpg');
+}
+/* Styles pour l'en-tête de la carte  */
+.card-header {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2em;  
+    font-weight: 600;
+    gap: 0.3em;
+    justify-content: space-between;
+    padding-top: 2%;
+    width: 90%;
+    margin-bottom: 2%;
+}
+
+/* Styles pour les éléments dans l'en-tête de la carte  */
+.left , .right{
+    display:flex;
+    flex-direction: column;
+}
+.card-header .type {
+    width: 100%;
+    font-size: 1em;
+    color: gold;
+}
+
+
+.card-header .year p {
+   text-align: right;
+    font-size: 1.5em;
+    color: red;
+}
+
+/* Styles pour l'image de la carte Pokémon */
+.card-image {
+    width: 90%;    
+    background-color: #fcce19;
+    border: 20px solid #fcce19;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.261);
+    height: 35vh;
+}
+
+.card-image>img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles pour les détails de la carte  */
+.card-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-details .info {
+    background-color: #fcce19;   
+    font-size: 1.2em;  
+    text-align: center;   
+    width: 70%;    
+    margin-top: 3%;
+    padding: 1%;
+}
+
+/******************* Styles pour le cardset de la carte  */
+
+.card-set  {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5%;
+    background-color: #7fffd43b;
+    width: 90%;
+    border-radius: 5px;
+    
+}
+.set-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0 3%;
+    align-items: center;
+}
+.set-details .label{
+    font-weight: 600;
+    color: aliceblue;
+    font-size: 1.3em;
+}
+.set-details .cost {
+    display: flex;
+    align-items: center;  
+}
+.card-set  p{
+    color: #fcce19;
+    font-size: 1em;
+    font-weight: bold;
+}
+/* Styles pour info */
+.card-info {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10%;
+}
+
+.card-info .exemplaire, .puissance, .prix {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0.04cm;
+}
+
+.card-info .label {
+    font-weight: 600;
+    color: aliceblue;
+    font-size: 1.5em;
+}
+
+.card-info .cost {
+    display: flex;
+    align-items: center;
+    margin: 0.04cm 0;
+}
+.set-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 0 3%;
+    align-items: center;
+}
+.set-info .label{
+    font-weight: 600;
+    color: aliceblue;
+    font-size: 1.3em;
+}
+.set-info .cost {
+    display: flex;
+    align-items: center;  
+}
+/* Styles pour le pied de page de la carte */
+.card-footer {       
+    font-weight: 600;
+    margin-top: 5%;
+    text-align: center;
+}
+.card-classement{
+    color: aliceblue;
+    font-size: 1.5em;
+}
+.card-footer .cost {    
+    color: red;
+}
+
