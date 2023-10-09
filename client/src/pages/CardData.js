@@ -16,6 +16,7 @@ const CardData = [
         brand: "Ferrari",
         year: "2013",
         img: ferrari,
+        logo:'https://seeklogo.com/images/F/ferrari-logo-7935CF173C-seeklogo.com.png',
         info:
             "La Ferrari est une voiture de sport emblématique de la marque italienne Ferrari, connue pour sa puissance, son design et son prestige.",
         setDetails: [
@@ -40,6 +41,7 @@ const CardData = [
         brand: "Lamborghini",
         year: "1995",
         img: diablo,
+        logo:"https://upload.wikimedia.org/wikipedia/fr/thumb/1/1d/Lamborghini-Logo.svg/1792px-Lamborghini-Logo.svg.png",
         info:
             "La Lamborghini Diablo SV est une voiture de sport emblématique de la marque italienne Lamborghini, connue pour sa puissance, son design et son prestige.",
         setDetails: [
@@ -64,6 +66,7 @@ const CardData = [
         brand: "Aston Martin",
         year: "2016",
         img: "chemin_vers_votre_image_astonmartin.jpg",
+        logo:"https://cdn.icon-icons.com/icons2/2402/PNG/512/aston_martin_logo_icon_145844.png",
         info:
             "L'Aston Martin DB11 est une voiture de luxe britannique, célèbre pour son élégance et son moteur V12 puissant.",
         setDetails: [
@@ -132,10 +135,11 @@ const CardData = [
     {
         id: 6,
         type: "Voiture de film",
-        name: "KITT (La voiture de K2000)",
+        name: "KITT",
         brand: "Knight Industries",
         year: "1982",
-        img: "chemin_vers_votre_image_kitt.jpg",
+        img: "https://swifthalf.com/wp-content/uploads/2023/04/KITT-Knight-Rider.jpg",
+        logo:"https://logos-world.net/wp-content/uploads/2021/04/Pontiac-Logo.png",
         info:
             "KITT (Knight Industries Two Thousand) est une voiture de film emblématique de la série télévisée K2000, connue pour son intelligence artificielle avancée et ses gadgets futuristes.",
         setDetails: [
@@ -151,7 +155,7 @@ const CardData = [
         classement: "N/A",
         description:
             "KITT est l'une des voitures les plus emblématiques de la télévision, célèbre pour son intelligence artificielle avancée, sa capacité à parler et ses gadgets futuristes qui ont aidé Michael Knight à lutter contre le crime.",
-        video: "lien_video_kitt",
+        video:"https://www.youtube.com/watch?v=ILXQPmHxsZw",
     },
     {
         id: 7,
@@ -208,6 +212,7 @@ const CardData = [
         brand: "Dodge",
         year: "1969",
         img: "chemin_vers_votre_image_dodge.jpg",
+        logo:"https://seeklogo.com/images/D/Dodge-logo-7A42A6FFCF-seeklogo.com.png",
         info:
             "La Dodge Charger de 1969 est une muscle car classique américaine, connue pour sa puissance brute et son design agressif.",
         setDetails: [
@@ -255,7 +260,8 @@ const CardData = [
         name: "911 GT3",
         brand: "Porsche",
         year: "2021",
-        img: "chemin_vers_votre_image_porsche1.jpg",
+        img: "https://carfans.fr/wp-content/uploads/2023/09/Porsche_911GT3R_rennsport_1.jpg",
+        logo:"https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png",
         info:
             "La Porsche 911 GT3 est une sportive allemande emblématique, connue pour ses performances sur piste et son moteur flat-six puissant.",
         setDetails: [
@@ -279,7 +285,8 @@ const CardData = [
         name: "Cayman",
         brand: "Porsche",
         year: "2022",
-        img: "chemin_vers_votre_image_porsche2.jpg",
+        img: "https://www.autoscout24.fr/cms-content-assets/4jF1aYBN0LcfADhD2BhIeu-41242322bd047debce870fba3a792c87-AS24-porsche_banner-1100.jpeg",
+        logo:"https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png",
         info:
             "La Porsche Cayman est une sportive allemande équilibrée, connue pour sa maniabilité et son design intemporel.",
         setDetails: [
@@ -302,8 +309,9 @@ const CardData = [
         type: "Sportive",
         name: "Panamera",
         brand: "Porsche",
+        logo:"https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png",
         year: "2021",
-        img: "chemin_vers_votre_image_porsche3.jpg",
+        img: "https://static.lpnt.fr/images/2020/08/27/20663069lpw-20663104-article-jpg_7305858_1250x625.jpg",
         info:
             "La Porsche Panamera est une berline sportive allemande, connue pour son luxe et ses performances impressionnantes.",
         setDetails: [
@@ -327,7 +335,8 @@ const CardData = [
         name: "Macan",
         brand: "Porsche",
         year: "2022",
-        img: "chemin_vers_votre_image_porsche4.jpg",
+        img: "https://www.automobile-club.org/content/image/crop/848/524/original/PORSCHE_MACAN_S.jpg",
+        logo:"https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png",
         info:
             "Le Porsche Macan est un SUV sportif allemand, connu pour sa polyvalence et ses performances sur route.",
         setDetails: [
@@ -351,7 +360,9 @@ const CardData = [
         name: "Taycan",
         brand: "Porsche",
         year: "2021",
-        img: "chemin_vers_votre_image_porsche5.jpg",
+        img: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-porsche-taycan-mmp-1-1629842296.jpg?crop=0.915xw:1.00xh;0.0433xw,0&resize=640:*",
+        logo:"https://1000logos.net/wp-content/uploads/2018/02/Porsche-Logo.png",
+
         info:
             "Le Porsche Taycan est une voiture électrique sportive allemande, connue pour ses performances électriques et son design moderne.",
         setDetails: [
@@ -376,6 +387,7 @@ const CardData = [
         brand: "Dodge",
         year: "1996",
         img: viper,
+        logo:"https://seeklogo.com/images/D/Dodge-logo-7A42A6FFCF-seeklogo.com.png",
         info:
             "La Dodge Viper GTS est une muscle car emblématique de la marque américaine Dodge, connue pour sa puissance brute et son design audacieux.",
         setDetails: [

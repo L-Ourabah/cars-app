@@ -57,11 +57,15 @@
 }
 .film{
     background-image: url('../images/film.jpg');
+
+}
+.Sportive{
+    background-image: url('../images/sportive.jpg');
 }
 /* Styles pour l'en-tête de la carte  */
 .card-header {
     display: flex;
-    flex-wrap: wrap;
+ 
     font-size: 1.2em;  
     font-weight: 600;
     gap: 0.3em;
@@ -76,6 +80,17 @@
     display:flex;
     flex-direction: column;
 }
+.right{
+    align-items: flex-end;
+}
+.logo {
+    width:30%;
+
+}
+.img-logo{
+   
+    width: 100%;
+}
 .card-header .type {
     width: 100%;
     font-size: 1em;
@@ -84,7 +99,7 @@
 
 
 .card-header .year p {
-   text-align: right;
+  
     font-size: 1.5em;
     color: red;
 }

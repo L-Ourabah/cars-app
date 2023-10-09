@@ -23,6 +23,9 @@ export default function CarDetails() {
 
                 <div className="title">
                     <h2>{car.name}</h2>
+                    <div className="logo2">
+                                <img className='img-logo2' src={car.logo} alt="" />
+                            </div>
                 </div>
                 <div className="contenu">
                     <div className="image">
@@ -30,14 +33,16 @@ export default function CarDetails() {
                     </div>
 
                     <div className="info">
-                        <div>
-                        <p>Informations: {car.description}</p>
+                        <div className='info-descri'>
+                            <p>Informations: {car.description}</p>
                         </div>
-                        <p>Type: {car.type}</p>
-                        <p>Année: {car.year}</p>
-                        <p>Marque: {car.brand}</p>
-                        
+                        <div className="sous-info">
+                            <p>Type: {car.type}</p>
+                            <p>Année: {car.year}</p>
+                           
+                        </div>
                     </div>
+
                 </div>
 
             </div>

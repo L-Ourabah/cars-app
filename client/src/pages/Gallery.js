@@ -9,7 +9,7 @@ export default function Gallery() {
     const [showAll, setShowAll] = useState(false); // Ne pas afficher toutes les voitures par défaut
 
     // Afficher les 10 meilleures voitures au classement initialement
-    const top10Cars = CardData.slice(0, 10);
+    const top10Cars = CardData.slice(0, 100);
 
     // Fonction pour gérer la recherche
     const handleSearch = (query) => {
@@ -20,6 +20,7 @@ export default function Gallery() {
         } else {
             const results = CardData.filter((car) =>
                 car.type.toLowerCase().includes(query.toLowerCase()) ||
+              
                 car.name.toLowerCase().includes(query.toLowerCase()) ||
                 car.year.toLowerCase().includes(query.toLowerCase()) ||
                 car.brand.toLowerCase().includes(query.toLowerCase()) // Recherche par marque
@@ -56,7 +57,9 @@ export default function Gallery() {
                     top10Cars.map((car) => (
                         <Card key={car.id} car={car} />
                     ))
-                )}
+
+                )
+                }
             </div>
         </div>
     );

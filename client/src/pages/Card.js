@@ -26,8 +26,8 @@ export default function Card({ car }) {
         </div>
 
         <div className="right">
-          <div className="brand">
-            <p>{car.brand}</p>
+          <div className="logo">
+            <img className ='img-logo' src={car.logo} alt=""/>
           </div>
           <div className="year">
             <p>{car.year}</p>
