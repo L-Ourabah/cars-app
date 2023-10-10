@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-a {
+.contenaire-about a {
   color: black;
   cursor: pointer;
   text-decoration: none;
@@ -114,6 +114,7 @@ hr {
   padding: 5px 0;
   color: #ffca38;
   text-shadow: 1px 3px 2px #000000;
+  margin-top: 15%;
 }
 
 h2,
@@ -172,22 +173,22 @@ hr,
   width: 90%;
 }
 
-.fab:hover {
+.card-pro .fab:hover {
   transform: scale(1.2);
 }
 
-.fa-linkedin:hover {
+.card-pro .fa-linkedin:hover {
   color: #004182;
 }
 
-.fa-github-square:hover {
+.card-pro .fa-github-square:hover {
   color: white;
 }
 
-.fa-youtube-square:hover {
+.card-pro .fa-youtube-square:hover {
   color: #FF0000;
 }
 
-.fa-discord:hover {
+.card-pro .fa-discord:hover {
   color: #6F85D5;
 }
