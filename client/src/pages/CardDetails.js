@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import CardData from './CardData';
 import '../style/CardDetails.css'
+import ReactPlayer from 'react-player'
 
 export default function CarDetails() {
     // Utilisez useParams pour obtenir l'ID de la voiture depuis l'URL
@@ -34,7 +35,7 @@ export default function CarDetails() {
 
                     <div className="info">
                         <div className='info-descri'>
-                            <p>Informations: {car.description}</p>
+                            <p> {car.description}</p>
                         </div>
                         <div className="sous-info">
                             <p>Type: {car.type}</p>
@@ -50,10 +51,14 @@ export default function CarDetails() {
                 <div className="title2">
                     <h2>{`Essai de la ${car.name}`}</h2>
                 </div>
+                <div className="video-dt">
+                    <ReactPlayer
+                        width="100%"
+                        height="100%"
+                        url={car.video} controls ="true"
 
-                <video
-                    src={car.video} controls
-                ></video>
+                    />
+                </div>
             </div>
 
             {/* Affichez d'autres détails de la voiture ici */}

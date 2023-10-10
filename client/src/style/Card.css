@@ -1,4 +1,7 @@
 /* Réinitialisation des styles */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
+
 *,
 *:before,
 *:after {
@@ -8,7 +11,13 @@
 }
 
 /* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+h1 ,h2,h3,h4,h5{
+    font-family: 'Bebas Neue',sans-serif ;
+}
 
+p{
+    font-family: 'Autour One';
+}
 
 
 /* Conteneur principal pour les cartes  */
@@ -17,7 +26,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 3%;
+   
     margin: 0 auto;
     padding-top: 80px;
 }
@@ -62,6 +71,9 @@
 .Sportive{
     background-image: url('../images/sportive.jpg');
 }
+.suv{
+    background-image: url('../images/quatre.png');
+}
 /* Styles pour l'en-tête de la carte  */
 .card-header {
     display: flex;
@@ -84,12 +96,13 @@
     align-items: flex-end;
 }
 .logo {
-    width:30%;
+    width:90px;
+    height:75px;
 
 }
 .img-logo{
-   
     width: 100%;
+    height: 100%;
 }
 .card-header .type {
     width: 100%;
@@ -99,7 +112,7 @@
 
 
 .card-header .year p {
-  
+    
     font-size: 1.5em;
     color: red;
 }
@@ -110,12 +123,13 @@
     background-color: #fcce19;
     border: 20px solid #fcce19;
     box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.261);
-    height: 35vh;
+    height: 287px;
 }
 
-.card-image>img {
+.card-image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 /* Styles pour les détails de la carte  */
@@ -132,6 +146,9 @@
     width: 70%;    
     margin-top: 3%;
     padding: 1%;
+}
+.marque{
+    display: none;
 }
 
 /******************* Styles pour le cardset de la carte  */
@@ -223,3 +240,24 @@
     color: red;
 }
 
+@media (max-width:760px) {
+    /* Styles pour la carte  */
+.card {
+   
+    width: 90%;
+    border-radius: 5px;
+    font-size: 1.1em;   
+    border: 20px solid #fcce19;  
+   /* background-image: url("../images/s-l400.jpg");  */ 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+
+
+}
