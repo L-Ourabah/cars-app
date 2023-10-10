@@ -53,6 +53,7 @@ export default function Sidebar() {
                     <Link className="sidebar-link" to="/signin" onClick={() => handleClick()}> <FaUser /> Se connecter</Link>} */}
 
                 <Link className="sidebar-link" to="/" onClick={() => handleClick()}><FaCartArrowDown /> Panier</Link>
+                <Link className="sidebar-link" to="/About" onClick={() => handleClick()}> About</Link>
 
             </div>
         </div>

@@ -6,7 +6,7 @@ import '../style/About.css'; // Assurez-vous d'avoir les styles CSS dans un fich
 
 function About() {
   return (
-    <div className="contenaire">
+    <div className="contenaire-about">
       <div className="card-pro">
         <div className="front">
           <div className="star">

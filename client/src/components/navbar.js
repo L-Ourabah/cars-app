@@ -39,10 +39,12 @@ export default function Navbar() {
 
             <div className="navbar-wrapper">
 
-                <Link className="logo-book" to="/home">LOGO</Link>
-
+                <Link className="logo-book" to="/home">CarApp</Link>
+                
+           
+          
                 <div className="navbar-content">
-
+                <Link className="navbar-links" to="/Gallery">Gallery</Link>
                     <Link className="navbar-links" to="/"><VscLibrary /></Link>
 
                     {/* {currentUser && currentUser.role === "admin" ? <Link className="navbar-links" to="/admin/gestion"><AiFillSetting /></Link> : ""} */}
@@ -51,6 +53,7 @@ export default function Navbar() {
                         (<span className="navbar-links" onClick={handleLogout}> < RiLogoutCircleRFill /></span>)
                         : (<Link className="navbar-links" to="/"><FaUser /></Link>)} */}
                     <Link className="navbar-links" to="/"><FaCartArrowDown /></Link>
+                    <Link className="navbar-links" to="/About">About</Link>
 
                 </div>
 
