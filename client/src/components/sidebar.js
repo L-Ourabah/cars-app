@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { useDispatch } from 'react-redux';
-import { hideSidebar } from '../redux/actions/sidebar-action.js';
+import { hideSidebar } from '../redux-store/actions/sidebar-action';
 
 // import { useContext } from 'react';
 // import { AuthContext } from '../context/authContext';
