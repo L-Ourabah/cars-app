@@ -457,7 +457,7 @@ const CardData = [
         video: "lien_video_mercedessclass",
     },
     {
-        id: 28,
+        id: 19,
         type: "Berline sportive",
         name: "M5",
         brand: "BMW",
@@ -478,6 +478,53 @@ const CardData = [
         classement: "25e",
         description: "La BMW M5 est une berline sportive qui offre une combinaison parfaite entre performance et confort, avec un design élégant.",
         video: "https://www.youtube.com/watch?v=rNg7CVb4-JI",
+    },
+    {
+        id: 20 ,
+        type: "suv",
+        name: "Classe G",
+        brand: "Mercedes-Benz",
+        year: "2023",
+        img: "https://example.com/mercedes-g-class-image.jpg",
+        logo: "https://example.com/mercedes-logo.png",
+        info: "La Mercedes Classe G est un VUS tout-terrain de luxe connu pour sa robustesse et son élégance.",
+        setDetails: [
+            { label: "Vitesse Max", cost: "210 km/h" },
+            { label: "0 à 100", cost: "7.0 sec" },
+            { label: "Poids", cost: "2 500 Kg" },
+        ],
+        cardInfo: [
+            { label: "Exemplaire", cost: "400" },
+            { label: "Puissance", cost: "350 CV" },
+            { label: "Prix", cost: "80 000 €" },
+        ],
+        classement: "28e",
+        description: "La Mercedes Classe G est un véritable tout-terrain de luxe, offrant une combinaison unique de performances et de confort.",
+        video: "lien_video_mercedesgclass",
+    },
+
+    {
+        id: 17,
+        type: "VUS 4x4",
+        name: "Q7",
+        brand: "Audi",
+        year: "2023",
+        img: "https://example.com/audi-q7-image.jpg",
+        logo: "https://example.com/audi-logo.png",
+        info: "L'Audi Q7 est un VUS 4x4 de luxe qui offre une expérience de conduite haut de gamme.",
+        setDetails: [
+            { label: "Vitesse Max", cost: "230 km/h" },
+            { label: "0 à 100", cost: "6.3 sec" },
+            { label: "Poids", cost: "2 200 Kg" },
+        ],
+        cardInfo: [
+            { label: "Exemplaire", cost: "600" },
+            { label: "Puissance", cost: "280 CV" },
+            { label: "Prix", cost: "70 000 €" },
+        ],
+        classement: "3e",
+        description: "L'Audi Q7 est un VUS de luxe avec des caractéristiques de conduite impressionnantes, un design moderne et un intérieur haut de gamme.",
+        video: "lien_video_audiq7",
     },
     
     

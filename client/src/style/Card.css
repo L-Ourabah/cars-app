@@ -72,7 +72,10 @@ p{
     background-image: url('../images/sportive.jpg');
 }
 .suv{
-    background-image: url('../images/quatre.png');
+    background-image: url('../images/quatre.jpg');
+}
+.Berline{
+    background-image: url('../images/berline-s.jpg')
 }
 /* Styles pour l'en-tête de la carte  */
 .card-header {
