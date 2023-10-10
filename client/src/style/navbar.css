@@ -1,0 +1,98 @@
+.logo-book {
+    font-size: 2.5em;
+    color: var(--noir);
+    display: flex;
+    font-family: 'Yellowtail';
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.burger-menu {
+    font-size: 2.5em;
+    display: none;
+}
+
+.navbar-links .panier:hover {
+    color: white;
+    /* background-color: black; */
+}
+
+.navbar {
+    background: var(--bleu-clair);
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    color: var(--noir);
+}
+
+.navbar-links {
+    padding-left: 10px;
+    font-size: 1.5em;
+    color: var(--noir);
+    text-transform: uppercase;
+}
+
+.sidebar {
+    background: var(--bleu-clair);
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-close {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5em;
+}
+
+.sidebar-links-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-link {
+    color: var(--bleu-fonce);
+    text-transform: uppercase;
+}
+
+.sidebar-link:hover {
+    color: var(--vert-fonce);
+    transform: scale(1.10);
+}
+
+#display-sidebar {
+    transform: translateX(0);
+    transition: 0.5s;
+}
+
+#hide-sidebar {
+    transform: translateX(100vw);
+    transition: 0.2s;
+}
+
+@media (max-width: 1200px) {
+    .burger-menu {
+        display: initial;
+    }
+
+    .navbar-content {
+        display: none;
+    }
+}
