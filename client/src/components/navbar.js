@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 // Pour la barre de navigation en mobile
 import { useDispatch } from 'react-redux';
-import { showSidebar } from '../redux/actions/sidebar-action.js';
+import { showSidebar } from '../redux-store/actions/sidebar-action';
 
 // Pour checker si l'utilisateur est connecté ou non
 // import { useContext } from 'react';
@@ -40,11 +40,11 @@ export default function Navbar() {
             <div className="navbar-wrapper">
 
                 <Link className="logo-book" to="/home">CarApp</Link>
-                
-           
-          
+
+
+
                 <div className="navbar-content">
-                <Link className="navbar-links" to="/Gallery">Gallery</Link>
+                    <Link className="navbar-links" to="/Gallery">Gallery</Link>
                     <Link className="navbar-links" to="/"><VscLibrary /></Link>
 
                     {/* {currentUser && currentUser.role === "admin" ? <Link className="navbar-links" to="/admin/gestion"><AiFillSetting /></Link> : ""} */}
