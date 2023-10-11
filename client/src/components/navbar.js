@@ -10,9 +10,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext.js';
 
 // Les logos
-import { FaCartArrowDown } from 'react-icons/fa';
+import { FcAutomotive } from 'react-icons/fc';
 import { FaUser } from 'react-icons/fa';
-import { VscLibrary } from 'react-icons/vsc';
+import { FcAbout } from 'react-icons/fc';
+
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiLogoutCircleRFill } from 'react-icons/ri';
 import { AiFillSetting } from 'react-icons/ai';
@@ -44,18 +45,19 @@ export default function Navbar() {
 
 
                 <div className="navbar-content">
-                    <Link className="navbar-links" to="/Gallery">Gallery</Link>
-                    <Link className="navbar-links" to="/"><VscLibrary /></Link>
+
+                
+
 
                     {currentUser && currentUser.role === "admin" ? <Link className="navbar-links" to="/admin/gestion"><AiFillSetting /></Link> : ""}
 
                     {currentUser ?
                         (<span className="navbar-links" onClick={handleLogout}> < RiLogoutCircleRFill /></span>)
-                        : (<Link className="navbar-links" to="/"><FaUser /></Link>)}
-                    <Link className="navbar-links" to="/"><FaCartArrowDown /></Link>
-                    <Link className="navbar-links" to="/About">About</Link>
-                    <Link className="navbar-links" to="/connexion">Connexion</Link>
-                    <Link className="navbar-links" to="/admin/gestion">Admin</Link>
+                        : (<Link className="navbar-links" to="/connexion"><FaUser /></Link>)}
+
+
+                    <Link className="navbar-links" to="/Gallery"><FcAutomotive /></Link>
+                    <Link className="navbar-links" to="/About"><FcAbout /></Link>
 
                 </div>
 
