@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../style/home.css';
-import ve from '../video/b.mp4';
+import ve from '../video/intro.mp4';
 import img1 from '../images/diabloSv.jpg'; // Remplacez par le chemin de votre image
 import img2 from '../images/laferrari.jpg'; // Remplacez par le chemin de votre image
 
