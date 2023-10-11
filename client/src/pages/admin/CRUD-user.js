@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 import '../../style/Admin.css'
@@ -19,7 +19,7 @@ const AddUserForm = () => {
         e.preventDefault();
         try {
             const res = await axios.post("/enregistrer", input)
-            setMessage("User registered")
+            window.location.reload()
         }
         catch (err) {
             setMessage("An error occured")
@@ -87,6 +87,7 @@ const CrudUser = () => {
 
     return (
         <div>
+            <h1>Gérer les utilisateurs</h1>
 
             < AddUserForm />
             < DisplayAllUser />
