@@ -39,7 +39,7 @@ export default function Navbar() {
 
             <div className="navbar-wrapper">
 
-                <Link className="logo-book" to="/home">CarApp</Link>
+                <Link className="logo-book" to="/">CarApp</Link>
 
 
 
@@ -54,6 +54,8 @@ export default function Navbar() {
                         : (<Link className="navbar-links" to="/"><FaUser /></Link>)}
                     <Link className="navbar-links" to="/"><FaCartArrowDown /></Link>
                     <Link className="navbar-links" to="/About">About</Link>
+                    <Link className="navbar-links" to="/connexion">Connexion</Link>
+                    <Link className="navbar-links" to="/admin/gestion">Admin</Link>
 
                 </div>
 
