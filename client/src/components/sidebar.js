@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { hideSidebar } from '../redux-store/actions/sidebar-action';
 
-// import { useContext } from 'react';
-// import { AuthContext } from '../context/authContext';
+import { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext.js';
 
 import { FaCartArrowDown, FaUser } from 'react-icons/fa';
 import { AiFillSetting } from 'react-icons/ai';
@@ -27,10 +27,10 @@ export default function Sidebar() {
         dispatch(hideSidebar());
     }
 
-    // const { currentUser, logout } = useContext(AuthContext);
+    const { currentUser, logout } = useContext(AuthContext);
 
     const handleLogout = async () => {
-        // await logout(AuthContext);
+        await logout(AuthContext);
         navigate("/");
         handleClick();
         console.log("deconnexion et redirection navbar responsive!");
@@ -45,12 +45,12 @@ export default function Sidebar() {
 
                 <Link className="sidebar-link" to="/" onClick={() => handleClick()}>< VscLibrary /> Les livres</Link>
 
-                {/* {currentUser && currentUser.role === "admin" ? <Link className="sidebar-link" to="/admin/gestion" onClick={() => handleClick()}><AiFillSetting />Gérer les livres</Link> : ""} */}
+                {currentUser && currentUser.role === "admin" ? <Link className="sidebar-link" to="/admin/gestion" onClick={() => handleClick()}><AiFillSetting />Gérer les livres</Link> : ""}
 
-                {/* {currentUser ?
+                {currentUser ?
                     <Link className="sidebar-link" onClick={() => handleLogout()}> <RiLogoutCircleRFill /> Se déconnecter</Link>
                     :
-                    <Link className="sidebar-link" to="/signin" onClick={() => handleClick()}> <FaUser /> Se connecter</Link>} */}
+                    <Link className="sidebar-link" to="/signin" onClick={() => handleClick()}> <FaUser /> Se connecter</Link>}
 
                 <Link className="sidebar-link" to="/" onClick={() => handleClick()}><FaCartArrowDown /> Panier</Link>
                 <Link className="sidebar-link" to="/About" onClick={() => handleClick()}> About</Link>
