@@ -1,6 +1,9 @@
-import { useState } from 'react'
-import '../../style/Admin.css'
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
+
+import '../../style/Admin.css'
+
 
 const AddUserForm = () => {
     const [input, setInput] = useState({
@@ -37,13 +40,45 @@ const AddUserForm = () => {
 }
 
 const DisplayAllUser = () => {
+    const [data, setData] = useState({})
+    useEffect(() => {
+        const fetchAllUsers = async () => {
+            try {
+                const res = await axios.get("/users")
+                setData(res.data);
+            }
+            catch (err) {
+                console.log(err);
+            }
 
+        };
+        fetchAllUsers();
+    }, [])
+
+    const handleDelete = async (id) => {
+        console.log('user id = ' + id)
+        try {
+            await axios.delete("/users/" + id)
+            console.log("Deleted")
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+    console.log(data)
     return (
-        <div>
+        <div className="liste-users">
 
-            <button className="update">UPDATE</button>
-            <button className="delete">DELETE</button>
-        </div>
+            {data[0] ? data.map(user => (
+                <div className="user-unique" key={user.iduser} >
+                    <h4>{user.username}</h4>
+                    <p>{user.email}</p>
+                    <button className='delete' onClick={() => handleDelete(user.iduser)}>Delete</button>
+                    <button className='update'><Link to={`/admin/gestion/` + user.iduser} >Update</Link></button>
+                </div>
+            )) : ''}
+
+        </div >
     )
 
 }

@@ -30,7 +30,7 @@ export const nouvelUtilisateur = (req, res) => {
 
 export const supprimerUtilisateur = (req, res) => {
     const userId = req.params.id;
-    const query = "DELETE FROM `cars`.user` WHERE iduser= ?"
+    const query = "DELETE FROM `cars`.`user` WHERE (`iduser` = ?);"
     db.query(query, userId, (err, data) => {
         if (err) return res.status(400).json(err)
         return res.status(200).json("Utilisateur supprimé")
@@ -56,8 +56,17 @@ export const modifierUtilisateur = (req, res) => {
 }
 
 export const montrerUtilisateur = (req, res) => {
-    const query = "SELECT * FROM `cars`.`user`"
+    const query = "SELECT * FROM `cars`.`user` WHERE role='user' "
     db.query(query, (err, data) => {
+        if (err) return res.status(400).json(err)
+        return res.json(data)
+    })
+}
+
+export const montrerUnUtilisateur = (req, res) => {
+    const query = "SELECT * FROM `cars`.`user` WHERE iduser = ?";
+    const userId = req.params.id;
+    db.query(query, userId, (err, data) => {
         if (err) return res.status(400).json(err)
         return res.json(data)
     })

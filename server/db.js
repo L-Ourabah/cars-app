@@ -3,7 +3,7 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import express from 'express';
 import { enregistrer, login, logout } from './controllers/authentification.js';
-import { modifierUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
+import { modifierUtilisateur, montrerUnUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
 
 
 export const db = mysql.createConnection({
@@ -33,8 +33,9 @@ export function createBackend(port) {
     // MONTRER 1 UTILISATEUR - MODIFIE SON PROFIL / SUPPRIMER
     app.post("/server/users", nouvelUtilisateur)
     app.get("/server/users", montrerUtilisateur)
+    app.get("/server/users/:id", montrerUnUtilisateur)
     app.put("/server/users/:id", modifierUtilisateur)
-    app.delete("/server/user/:id", supprimerUtilisateur)
+    app.delete("/server/users/:id", supprimerUtilisateur)
 
     // CRUD VOITURES - CATEGORIE + SOUS CATEGORIE 2
     // 4 * CATEGORIES
@@ -45,6 +46,12 @@ export function createBackend(port) {
     app.post("/server/enregistrer", enregistrer)
     app.post("/server/login", login)
     app.post("/server/logout", logout)
+
+
+    app.get('/cors', (req, res) => {
+        res.set('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.send({ "msg": "This has CORS enabled 🎈" })
+    })
 
     app.listen(port, () => {
         console.log('API listening at ' + port)

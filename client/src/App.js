@@ -8,6 +8,7 @@ import CarDetails from './pages/CardDetails.js';
 import About from './pages/About.js';
 import { Connexion } from './pages/Connexion';
 import { Admin } from './pages/admin/Admin.js';
+import { CrudOneUser } from './pages/admin/CRUD-unique';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       {/* ADMINISTRATION */}
       <Route path="/admin" />
       <Route path="/admin/gestion" element={< Admin />} />
+      <Route path="/admin/gestion/:id" element={< CrudOneUser />}></Route>
     </Routes>
   );
 }
