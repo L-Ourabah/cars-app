@@ -140,5 +140,8 @@ h2 {
     .add-user-form {
         margin-bottom: 15%;
     }
+    .contenaire-u{
+        height: 75vh;
+    }
 }
 
