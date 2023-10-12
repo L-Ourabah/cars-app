@@ -15,7 +15,7 @@ p{
    display: flex;
     justify-content: center;
   align-items: center;
-  background: #444857;
+  background-color: #6d6060;
   gap: 15%;
 }
 .about {

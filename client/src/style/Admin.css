@@ -12,6 +12,7 @@ p {
 }
 .admin{
     height: 100vh;
+    
 }
 /* Styles pour les formulaires d'ajout et de mise à jour d'utilisateur */
 .form-user, .add-user-form, .single-user-form {
