@@ -5,6 +5,7 @@ import express from 'express';
 import { enregistrer, login, logout } from './controllers/authentification.js';
 import { modifierUtilisateur, montrerUnUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
 import { modifierVoiture, montrerVoiture, montrerVoitures, nouvelVoiture, supprimerVoiture } from './controllers/CRUD-voiture.js';
+import { filtreVoiture, topDixVoiture } from './controllers/filtre-voiture.js';
 
 
 export const db = mysql.createConnection({
@@ -50,6 +51,9 @@ export function createBackend(port) {
     app.post("/server/login", login)
     app.post("/server/logout", logout)
 
+    // FILTRE VOITURE
+    app.get("/server/filtre/:filtre", filtreVoiture)
+    app.get("/server/top/10", topDixVoiture)
 
     app.get('/cors', (req, res) => {
         res.set('Access-Control-Allow-Origin', 'http://localhost:3000');

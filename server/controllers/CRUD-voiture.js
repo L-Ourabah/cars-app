@@ -98,7 +98,7 @@ export const modifierVoiture = (req, res) => {
 }
 
 export const montrerVoitures = (req, res) => {
-    const query = `SELECT * FROM car LEFT JOIN details ON car.id = details.id_car`
+    const query = `SELECT * FROM car LEFT JOIN details ON car.id = details.id_car  JOIN cars.info ON cars.car.id = info.id_car`
     db.query(query, (err, data) => {
         if (err) return res.status(400).json(err)
         return res.json(data)
