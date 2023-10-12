@@ -37,8 +37,8 @@ export const Connexion = () => {
     const handleRegister = async (e) => {
         e.preventDefault()
         try {
-            await axios.post("/enregistrer", inputsRegister)
-            console.log("je crois que t'es enregistré mais j'sais pas")
+            const res = await axios.post("/enregistrer", inputsRegister)
+            console.log(res)
         }
         catch (err) {
             console.log('handle register err: ' + err)

@@ -23,7 +23,7 @@ export const nouvelUtilisateur = (req, res) => {
 
     db.query(query, [value], (err, data) => {
         if (err) return res.status(400).json(err)
-        return res.status(200).json("User registered")
+        return res.status(200).json(data)
 
     })
 }
