@@ -16,7 +16,7 @@ p{
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-   
+    
     margin: 0 auto;
     padding-top: 80px;
 }
@@ -272,6 +272,12 @@ p{
     font-size: 0.8em;
 }
 
-
+.card-image {
+    width: 90%;    
+    background-color: #fcce19;
+    border: 20px solid #fcce19;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.261);
+    height: 150px;
+}
 
 }

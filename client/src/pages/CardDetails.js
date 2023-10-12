@@ -1,10 +1,13 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams ,useNavigate} from 'react-router-dom';
 import CardData from './CardData';
 import '../style/CardDetails.css'
 import ReactPlayer from 'react-player'
 
 export default function CarDetails() {
+
+    const navigate = useNavigate();
+
     // Utilisez useParams pour obtenir l'ID de la voiture depuis l'URL
     const { id } = useParams();
 
@@ -60,6 +63,12 @@ export default function CarDetails() {
                     />
                 </div>
             </div>
+            <div className="navigation">
+            {/* Bouton de retour vers la page de recherche */}
+            <button className="back-button" onClick={() => navigate(-1)}>Précédent</button>
+            <button className="home-button" onClick={() => navigate('/')}>Accueil</button>
+          
+          </div>
 
             {/* Affichez d'autres détails de la voiture ici */}
 

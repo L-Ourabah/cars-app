@@ -7,7 +7,14 @@ h1 ,h2,h3,h4,h5{
 p{
     font-family: 'Autour One',sans-serif;
 }
-
+.contenaire-gallery{
+    background-color: #6d6060;
+}
+.contenaire-gallery h1{
+    font-size: 4em;
+    color: aliceblue;
+    padding-top: 2%;
+}
 .card-container{
     display: flex;
     flex-wrap: wrap;
