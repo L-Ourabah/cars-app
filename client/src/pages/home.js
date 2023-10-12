@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       {/* Section vidéo d'ouverture */}
       <section className="video-section">
-        <video autoPlay loop>
+        <video autoPlay muted loop>
           <source src={ve} type="video/mp4" />
           Votre navigateur ne prend pas en charge la lecture de vidéos.
         </video>

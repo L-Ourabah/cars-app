@@ -1,6 +1,6 @@
 import React from 'react';
 import '../style/Card.css';
-import {  useNavigate } from 'react-router-dom'; // Importez Link et useNavigate
+import { useNavigate } from 'react-router-dom'; // Importez Link et useNavigate
 
 export default function Card({ car }) {
   console.log(car.type);
@@ -50,16 +50,23 @@ export default function Card({ car }) {
         {car
           ? (
             <div className="set-details" key={car.id}>
-             
+
               <div className="cost">
-                <div className="cost-info"> vitesse max
+                <div className="cost-info">
+                  <h2> vitesse max</h2>
                   <p>{car.vitesse_max}</p>
                 </div>
-                <p>{car.zero_cent}</p>
 
-                <p>{car.poids}</p>
+                <div className="cost-info">
+                  <h2> 0 à 100</h2>
+                  <p>{car.zero_cent} s</p>
+                </div>
 
+                <div className="cost-info">
+                  <h2> poids</h2>
+                  <p>{car.poids} kg</p>
 
+                </div>
               </div>
             </div>
           ) : ''}
@@ -69,12 +76,38 @@ export default function Card({ car }) {
         {car
           ? (
             <div className="set-info" key={car.id}>
-              <div className="cost-info"> vitesse max
-                <p>{car.exemplaire}</p>
+              <div className="cost-info">
+                <div >
+                  <h2> exemplaire</h2>
+                </div>
+                <div >
+                  <p>{car.exemplaire} pc</p>
+                </div>
               </div>
-              <p>{car.puissance}</p>
+              <div className="cost-info"></div>
 
-              <p>{car.prix}</p>
+              <div className="cost-info">
+                <div >
+
+                  <h2> puissance</h2>
+                </div>
+                <div >
+                  <p>{car.puissance} cv</p>
+                </div>
+
+              </div>
+
+              <div className="cost-info">
+
+                <div >
+                  <h2> prix </h2>
+                </div>
+                <div >
+                  <p>{car.prix} €</p>
+                </div>
+
+              </div>
+
             </div>
           ) : ''}
       </div>
