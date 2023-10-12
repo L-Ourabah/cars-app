@@ -1,6 +1,7 @@
 import express from 'express';
 import { enregistrer, login, logout } from './controllers/authentification.js';
 import { modifierUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
+import { modifierVoiture, montrerVoitures, nouvelVoiture, supprimerVoiture } from './controllers/CRUD-voiture.js';
 
 const router = express.Router();
 
@@ -16,9 +17,9 @@ router.put("/server/users/:id", modifierUtilisateur)
 router.delete("/server/users/:id", supprimerUtilisateur)
 
 // CRUD VOITURE
-router.get("/server/cars")
-router.post("/server/cars")
-router.put("/server/cars/:id")
-router.delete("/server/cars/:id")
+router.get("/server/cars", montrerVoitures)
+router.post("/server/cars", nouvelVoiture)
+router.put("/server/cars/:id", modifierVoiture)
+router.delete("/server/cars/:id", supprimerVoiture)
 
 export default router;
