@@ -2,8 +2,11 @@ import { useContext, useState } from 'react';
 import '../style/connexion.css';
 import { AuthContext } from '../context/AuthContext.js';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 export const Connexion = () => {
+
+    const navigate = useNavigate();
     const { login } = useContext(AuthContext);
     const [activeTab, setActiveTab] = useState('register'); // Onglet actif par défaut
 
@@ -21,6 +24,7 @@ export const Connexion = () => {
         try {
             await login(inputsConnect)
             console.log("yay t'es connecté")
+            navigate("/admin/gestion")
         }
         catch (err) {
             console.log('bah ça se connecte pas oupsi + ' + err);
@@ -39,6 +43,7 @@ export const Connexion = () => {
         try {
             const res = await axios.post("/enregistrer", inputsRegister)
             console.log(res)
+            window.location.reload()
         }
         catch (err) {
             console.log('handle register err: ' + err)
@@ -51,44 +56,44 @@ export const Connexion = () => {
 
     return (
         <div className='log'>
-        <div className="connexion">
-            <div className="onglets">
-                <button
-                    className={activeTab === 'register' ? 'active' : ''}
-                    onClick={() => setActiveTab('register')}
-                >
-                    S'ENREGISTRER
-                </button>
-                <button
-                    className={activeTab === 'connect' ? 'active' : ''}
-                    onClick={() => setActiveTab('connect')}
-                >
-                    SE CONNECTER
-                </button>
+            <div className="connexion">
+                <div className="onglets">
+                    <button
+                        className={activeTab === 'register' ? 'active' : ''}
+                        onClick={() => setActiveTab('register')}
+                    >
+                        S'ENREGISTRER
+                    </button>
+                    <button
+                        className={activeTab === 'connect' ? 'active' : ''}
+                        onClick={() => setActiveTab('connect')}
+                    >
+                        SE CONNECTER
+                    </button>
+                </div>
+                <div className="enregistrer" style={{ display: activeTab === 'register' ? 'block' : 'none' }}>
+                    <h1>S'ENREGISTRER</h1>
+                    <form className="enregistrer-form">
+                        <label>USERNAME</label>
+                        <input placeholder="username" name="username" type="text" onChange={changeRegister} />
+                        <label>EMAIL</label>
+                        <input placeholder="email" name="email" type="email" onChange={changeRegister} />
+                        <label>PASSWORD</label>
+                        <input placeholder="password" name="password" type="password" onChange={changeRegister} />
+                        <button className="enregistrer-button" onClick={handleRegister}>REGISTER</button>
+                    </form>
+                </div>
+                <div className="connecter" style={{ display: activeTab === 'connect' ? 'block' : 'none' }}>
+                    <h1>SE CONNECTER</h1>
+                    <form className="connecter-form">
+                        <label>USERNAME</label>
+                        <input placeholder="username" name="username" type="text" onChange={changeConnect} />
+                        <label>Password</label>
+                        <input placeholder="password" name="password" type="password" onChange={changeConnect} />
+                        <button className="connecter-button" onClick={handleConnect}>CONNECT</button>
+                    </form>
+                </div>
             </div>
-            <div className="enregistrer" style={{ display: activeTab === 'register' ? 'block' : 'none' }}>
-                <h1>S'ENREGISTRER</h1>
-                <form className="enregistrer-form">
-                    <label>USERNAME</label>
-                    <input placeholder="username" name="username" type="text" onChange={changeRegister} />
-                    <label>EMAIL</label>
-                    <input placeholder="email" name="email" type="email" onChange={changeRegister} />
-                    <label>PASSWORD</label>
-                    <input placeholder="password" name="password" type="password" onChange={changeRegister} />
-                    <button className="enregistrer-button" onClick={handleRegister}>REGISTER</button>
-                </form>
-            </div>
-            <div className="connecter" style={{ display: activeTab === 'connect' ? 'block' : 'none' }}>
-                <h1>SE CONNECTER</h1>
-                <form className="connecter-form">
-                    <label>USERNAME</label>
-                    <input placeholder="username" name="username" type="text" onChange={changeConnect} />
-                    <label>Password</label>
-                    <input placeholder="password" name="password" type="password" onChange={changeConnect} />
-                    <button className="connecter-button" onClick={handleConnect}>CONNECT</button>
-                </form>
-            </div>
-        </div>
         </div>
     )
 }

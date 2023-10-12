@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 import { enregistrer, login, logout } from './controllers/authentification.js';
 import { modifierUtilisateur, montrerUnUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
-import { montrerVoiture, montrerVoitures } from './controllers/CRUD-voiture.js';
+import { modifierVoiture, montrerVoiture, montrerVoitures } from './controllers/CRUD-voiture.js';
 
 
 export const db = mysql.createConnection({
@@ -43,7 +43,8 @@ export function createBackend(port) {
     // PAR VOITURE - MONTRER INFO D'UNE VOIUTRE
     // MONTRER
     app.get("/server/cars", montrerVoitures)
-    app.get("/server/uno", montrerVoiture)
+    app.get("/server/cars/:id", montrerVoiture)
+    app.put("/server/cars/:id", modifierVoiture)
 
     // AUTHENTIFICATION - LOGIN / LOGOUT / REGISTER
     app.post("/server/enregistrer", enregistrer)
