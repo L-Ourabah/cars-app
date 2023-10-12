@@ -1,4 +1,7 @@
 /* Styles pour la page de détails de la voiture */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
+
 .details {
   background-color: #f0f0f0;
   border: 1px solid #ddd;
@@ -12,12 +15,14 @@
 .details h2 {
   font-size: 2em;
   color: #333;
+  font-family: 'Bebas Neue',sans-serif ;
 }
 
 .details p {
   font-size: 16px;
   color: #666;
   margin: 5px 0;
+  font-family: 'Autour One',sans-serif;
 }
 
 .title {

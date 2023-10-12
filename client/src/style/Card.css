@@ -1,5 +1,13 @@
 /* Réinitialisation des styles */
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+h1 ,h2,h3,h4,h5{
+    font-family: 'Bebas Neue',sans-serif ;
+}
 
+p{
+    font-family: 'Autour One',sans-serif;
+}
 
 
 /* Conteneur principal pour les cartes  */
