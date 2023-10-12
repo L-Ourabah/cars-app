@@ -47,6 +47,7 @@ export const CrudOneUser = () => {
         }
     }
     return (
+        <div className="contenaire-u">
         <div className="single-user-form">
             <label>Username :</label>
             <input placeholder="username" defaultValue={data.username} onChange={handleChange} type="text" name="username" />
@@ -55,6 +56,7 @@ export const CrudOneUser = () => {
             <label>Password :</label>
             <input placeholder="new password" onChange={handleChange} type="password" name="password" />
             <button className="submit-unique" onClick={handleClick}>Submit</button>
+        </div>
         </div>
     )
 }
