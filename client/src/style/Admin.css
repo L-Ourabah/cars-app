@@ -15,10 +15,7 @@ p {
     font-family: 'Autour One', sans-serif;
 }
 
-.admin {
-    height: 100vh;
-    
-}
+
 
 /* Styles pour les formulaires d'ajout et de mise à jour d'utilisateur */
 .form-user,

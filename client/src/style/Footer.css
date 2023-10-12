@@ -46,15 +46,6 @@ footer {
     transition: linear 0.3s;
 }
 
-/* Styles pour la séparation horizontale */
-.footer-container hr {
-    width: 60%;
-    margin: 2px auto;
-    opacity: 40%;
-    border: 0.01px solid rgb(220, 203, 17);
-    margin-top: 2%;
-    margin-bottom: 2;
-}
 
 /* Styles pour le texte de copyright */
 .copyright {
