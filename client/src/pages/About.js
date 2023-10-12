@@ -22,7 +22,7 @@ function About() {
         <div className="back">
           <div className="container-info">
             <h2>Développeur Padawan</h2>
-          <p>En tant que padawan du développement, j'apprends auprès d'un développeur expérimenté pour devenir un professionnel compétent.</p>
+          <p className='starwars'>En tant que padawan du développement, j'apprends auprès d'un développeur expérimenté pour devenir un professionnel compétent.</p>
 
             <hr />
 
@@ -46,7 +46,7 @@ function About() {
         <div className="back">
           <div className="container-info">
             <h2>Développeur Jedi</h2>
-            <p>En tant que spécialiste du backend, je crée des composants techniques d'applications, assurant leur performance et leur sécurité en collaboration avec les développeurs frontend.</p>         
+            <p className='starwars'>En tant que spécialiste du backend, je crée des composants techniques d'applications, assurant leur performance et leur sécurité en collaboration avec les développeurs frontend.</p>         
 
             <hr />
 

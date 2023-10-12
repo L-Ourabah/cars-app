@@ -71,6 +71,7 @@
 
 .info-descri{
   font-weight: bold;
+  margin-top: 5%;
 }
 
 .sous-info{
@@ -98,4 +99,20 @@
 .video-dt{
   width: 70%;
   height: 725px;
+}
+@media (max-width:760px) {
+
+ 
+  .contenu {
+   flex-direction:column;
+   align-items: center;
+  }
+  
+
+  .video-dt{
+    height: 199px;
+  }
+
+ 
+  
 }

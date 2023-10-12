@@ -1,77 +1,69 @@
+/* Importation des polices Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
-/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
-h1 ,h2,h3,h4,h5{
-    font-family: 'Bebas Neue',sans-serif ;
+
+/* Styles généraux pour les titres et paragraphes */
+h1, h2, h3, h4, h5 {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-p{
-    font-family: 'Autour One',sans-serif;
+p {
+    font-family: 'Autour One', sans-serif;
 }
 
-
-/* Footer Styles */
+/* Styles pour le footer */
 footer {
-  color: #fff;
-  background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
-  position: relative;
-  width: 100%;
-  height: 100%;
-
-  /*border-top-left-radius: 70px;*/
-  font-size: 0.8rem;
+    color: #fff;
+    background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 0.8rem;
+    /*border-top-left-radius: 70px;*/
+    padding: 2%;
 }
 
-.footer-contenaire {
-
-  padding-top: 20px;
-  padding-bottom: 20px;
- 
-  gap: 50px;
-
+.footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 50px;
 }
-
-
-
 
 .link-des {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .link-des a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
 .link-des a:hover {
-  color: #FB2576;
-  transition: linear 0.3s;
+    color: #FB2576;
+    transition: linear 0.3s;
 }
 
+/* Styles pour la séparation horizontale */
+.footer-container hr {
+    width: 60%;
+    margin: 2px auto;
+    opacity: 40%;
+    border: 0.01px solid rgb(220, 203, 17);
+    margin-top: 2%;
+    margin-bottom: 2;
+}
 
-
+/* Styles pour le texte de copyright */
 .copyright {
-  text-align: center;
+    text-align: center;
+    padding: 20px;
 }
 
-.copyright hr {
-  width: 60%;
-  margin: 2px auto;
-  opacity: 40%;
-  border: 0.01px solid rgb(220, 203, 17);
+/* Styles responsives  */
+@media (max-width: 760px) {
+    /* Ajoutez  */
 }
 
-.copyright p {
-  padding: 20px;
-}
-
-@media (max-width: 960px) {
-  footer {
-    width: 100%;
-    top: 120px;
-  }
-
-}

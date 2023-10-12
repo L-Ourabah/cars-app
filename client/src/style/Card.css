@@ -110,7 +110,7 @@ p{
     color: red;
 }
 
-/* Styles pour l'image de la carte Pokémon */
+/* Styles pour l'image de la carte  */
 .card-image {
     width: 90%;    
     background-color: #fcce19;
@@ -181,8 +181,13 @@ p{
 /* Styles pour info */
 .card-info {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: space-around;
-    margin-top: 10%;
+    margin-top: 5%;
+    background-color: #7fffd43b;
+    width: 90%;
+    border-radius: 5px;
 }
 
 .card-info .exemplaire, .puissance, .prix {
@@ -249,6 +254,22 @@ p{
     flex-direction: column;
     align-items: center;
     margin-bottom: 3%;
+}
+.card {
+    width: 90%;
+}
+.card-info .label,
+.set-details .label {
+    font-size: 1.3em;
+}
+.card-header .type {
+    font-size: 1em;
+}
+.card-header .year p {
+    font-size: 1.3em;
+}
+.card-details .info{
+    font-size: 0.8em;
 }
 
 

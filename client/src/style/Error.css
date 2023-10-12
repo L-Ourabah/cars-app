@@ -61,8 +61,16 @@ section.notFound h1, h2, h3 {
     }
     section.notFound div.img img {
         width: 70vw;
-        height: auto;
+        height: auto   ;
+         margin-left: 12%;
+
     }
+    section.notFound div.img  {
+      
+ margin-bottom: 15%;
+    margin-top: 15%;
+    }
+   
     section.notFound h1 {
         font-size: 50px;
     }

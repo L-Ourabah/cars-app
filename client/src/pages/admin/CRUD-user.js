@@ -86,7 +86,7 @@ const DisplayAllUser = () => {
 const CrudUser = () => {
 
     return (
-        <div>
+        <div className='utilisateur'>
             <h1>Gérer les utilisateurs</h1>
 
             < AddUserForm />

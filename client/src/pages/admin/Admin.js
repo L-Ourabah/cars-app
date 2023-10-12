@@ -12,20 +12,24 @@ export const Admin = () => {
     const { currentUser } = useContext(AuthContext);
 
     return (
-        <div>
+        <div className="admin">
+
             <div>
                 <h2>Bienvenue {currentUser?.username}</h2>
             </div>
 
-            <div>
-                <CrudUser />
-            </div>
+            <div className="admin1">
+                <div className="user">
+                    <CrudUser />
+                </div>
 
-            <div>
-                < CrudVoitures />
+                <div className="voitures">
+                    < CrudVoitures />
 
-            </div>
-        </div >
+                </div>
+            </div >
+
+        </div>
     )
 
 }

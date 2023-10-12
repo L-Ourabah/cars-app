@@ -1,16 +1,16 @@
-import { useContext, useState } from 'react'
-import '../style/connexion.css'
-import { AuthContext } from '../context/AuthContext.js'
-import axios from 'axios'
-
+import { useContext, useState } from 'react';
+import '../style/connexion.css';
+import { AuthContext } from '../context/AuthContext.js';
+import axios from 'axios';
 
 export const Connexion = () => {
+    const { login } = useContext(AuthContext);
+    const [activeTab, setActiveTab] = useState('register'); // Onglet actif par défaut
 
-    const { login } = useContext(AuthContext)
     const [inputsConnect, setInputsConnect] = useState({
         username: "",
         password: ""
-    })
+    });
 
     const changeConnect = (e) => {
         setInputsConnect(prev => ({ ...prev, [e.target.name]: e.target.value }))
@@ -26,7 +26,6 @@ export const Connexion = () => {
             console.log('bah ça se connecte pas oupsi + ' + err);
         }
     }
-    // console.log(inputsConnect)
 
     // PARTIE QUI GERE L'INSCRIPTION
     const [inputsRegister, setInputsRegister] = useState({
@@ -49,11 +48,25 @@ export const Connexion = () => {
     const changeRegister = (e) => {
         setInputsRegister(prev => ({ ...prev, [e.target.name]: e.target.value }))
     }
-    // console.log(inputsRegister);
-    return (
-        <div className="connexion">
 
-            <div className="enregistrer">
+    return (
+        <div className='log'>
+        <div className="connexion">
+            <div className="onglets">
+                <button
+                    className={activeTab === 'register' ? 'active' : ''}
+                    onClick={() => setActiveTab('register')}
+                >
+                    S'ENREGISTRER
+                </button>
+                <button
+                    className={activeTab === 'connect' ? 'active' : ''}
+                    onClick={() => setActiveTab('connect')}
+                >
+                    SE CONNECTER
+                </button>
+            </div>
+            <div className="enregistrer" style={{ display: activeTab === 'register' ? 'block' : 'none' }}>
                 <h1>S'ENREGISTRER</h1>
                 <form className="enregistrer-form">
                     <label>USERNAME</label>
@@ -65,9 +78,7 @@ export const Connexion = () => {
                     <button className="enregistrer-button" onClick={handleRegister}>REGISTER</button>
                 </form>
             </div>
-
-
-            <div className="connecter">
+            <div className="connecter" style={{ display: activeTab === 'connect' ? 'block' : 'none' }}>
                 <h1>SE CONNECTER</h1>
                 <form className="connecter-form">
                     <label>USERNAME</label>
@@ -77,7 +88,8 @@ export const Connexion = () => {
                     <button className="connecter-button" onClick={handleConnect}>CONNECT</button>
                 </form>
             </div>
-
+        </div>
         </div>
     )
 }
+

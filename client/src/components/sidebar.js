@@ -8,9 +8,16 @@ import { hideSidebar } from '../redux-store/actions/sidebar-action';
 import { useContext } from 'react';
 import { AuthContext } from '../context/AuthContext.js';
 
-import { FaCartArrowDown, FaUser } from 'react-icons/fa';
+
+
+
+// Les logos
+import { FcAutomotive } from 'react-icons/fc';
+import { FaUser } from 'react-icons/fa';
+import { FcAbout } from 'react-icons/fc';
+
 import { AiFillSetting } from 'react-icons/ai';
-import { VscLibrary } from 'react-icons/vsc';
+
 import { RiLogoutCircleRFill } from 'react-icons/ri';
 import { ImCross } from 'react-icons/im';
 
@@ -43,17 +50,17 @@ export default function Sidebar() {
 
             <div className="sidebar-links-list">
 
-                <Link className="sidebar-link" to="/" onClick={() => handleClick()}>< VscLibrary /> Les livres</Link>
+               
 
-                {currentUser && currentUser.role === "admin" ? <Link className="sidebar-link" to="/admin/gestion" onClick={() => handleClick()}><AiFillSetting />Gérer les livres</Link> : ""}
+                {currentUser && currentUser.role === "admin" ? <Link className="sidebar-link" to="/admin/gestion" onClick={() => handleClick()}><AiFillSetting /></Link> : ""}
 
                 {currentUser ?
-                    <Link className="sidebar-link" onClick={() => handleLogout()}> <RiLogoutCircleRFill /> Se déconnecter</Link>
+                    <Link className="sidebar-link" onClick={() => handleLogout()}> <RiLogoutCircleRFill /> </Link>
                     :
-                    <Link className="sidebar-link" to="/signin" onClick={() => handleClick()}> <FaUser /> Se connecter</Link>}
+                    <Link className="sidebar-link" to="/connexion" onClick={() => handleClick()}> <FaUser /> </Link>}
 
-                <Link className="sidebar-link" to="/" onClick={() => handleClick()}><FaCartArrowDown /> Panier</Link>
-                <Link className="sidebar-link" to="/About" onClick={() => handleClick()}> About</Link>
+                <Link className="sidebar-link" to="/Gallery" onClick={() => handleClick()}><FcAutomotive /> </Link>
+                <Link className="sidebar-link" to="/About" onClick={() => handleClick()}> <FcAbout/></Link>
 
             </div>
         </div>

@@ -9,109 +9,97 @@ p{
 }
 
 
+/* style/connexion.css */
 
-.connexion {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-    align-items: center;
-
-    gap: 25px;
-}
-
-.enregistrer-form,
-.connecter-form {
-    display: flex;
-    flex-direction: column;
-}
-
-
-/* Styles pour la page de connexion/inscription de la société automobile */
-
-
-
-.container-log {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+/* Styles généraux */
+.log {
+    height: 70vh;
+    background-color: #6d6060;
+     padding: 5%;
+  }
+  
+  .connexion {
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-/* Styles pour les onglets */
-.tabs {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.tab {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    cursor: pointer;
-    background-color: #0078D4;
-    color: #fff;
-    border: none;
-    border-radius: 5px 5px 0 0;
-}
-
-.tab.active {
-    background-color: #005A9E;
-}
-
-/* Styles pour les sections de connexion et d'inscription */
-.tabs .section {
+    max-width: 400px;
+  
     padding: 20px;
-    display: none;
-}
-
-.tabs .section.active {
-    display: block;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.enregistrer-form,
-.connecter-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.enregistrer-form,
-.connecter-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.enregistrer-form,
-.connecter-form button {
-    display: block;
-    width: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin: 5% auto;
+   
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Styles pour les onglets */
+  .onglets {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .onglet {
+    padding: 10px 20px;
+    background-color: #ccc;
+    cursor: pointer;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 0 10px;
+    color: #333;
+  }
+  
+  .onglet.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Styles pour les formulaires */
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin: 10px 0;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input {
     padding: 10px;
-    background-color: #0078D4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 5px 0;
+  }
+  
+  button {
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
+    padding: 10px;
     cursor: pointer;
-}
-
-/* Styles spécifiques pour la section de connexion */
-.connecter {
-    background-color: #fff;
-}
-
-/* Styles spécifiques pour la section d'inscription */
-.enregistrer {
-    background-color: #fff;
-}
+    margin-top: 10px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .connexion {
+      max-width: 100%;
+    }
+  
+    .onglets {
+      flex-direction: column;
+    }
+  
+    .onglet {
+      margin: 10px 0;
+    }
+  }
+  
