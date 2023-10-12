@@ -4,7 +4,18 @@ import '../style/Footer.css'; // Assurez-vous d'importer le CSS approprié ici
 function Footer() {
   return (
     <footer>
-      <div className="main">
+      <div className="footer-contenaire"> 
+         
+          <div className="link-des">
+            <a href="#" className="footer-links">Home</a>
+            <a href="#" className="footer-links">About</a>
+            
+            
+            <a href="#" className="footer-links">Contact</a>
+          </div>
+        
+
+        {/* 
         <div className="logo row">
           <div className="footer-header">
             <img src="" className="manik" alt="" />
@@ -15,7 +26,9 @@ function Footer() {
           </div>
         </div>
 
-        <div className="office row">
+       
+
+       <div className="office row">
           <div className="footer-header">
             <h3>Office</h3>
           </div>
@@ -26,18 +39,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="link row">
-          <div className="footer-header">
-            <h3>Links</h3>
-          </div>
-          <div className="link-des">
-            <a href="#" className="footer-links">Home</a>
-            <a href="#" className="footer-links">About</a>
-            
-            
-            <a href="#" className="footer-links">Contact</a>
-          </div>
-        </div>
+       
 
         <div className="newsletter row">
           <div className="footer-header">
@@ -56,11 +58,11 @@ function Footer() {
               <a href="#"><i className="social-icon ri-github-line"></i></a>
             </div>
           </div>
-        </div>
+        </div>*/}
       </div>
       <div className="copyright">
         <hr />
-        <p>© Copyright 2023 Cars App</p>
+        <p>© Copyright 2023 Cars App | Melanie Ourabah</p>
       </div>
     </footer>
   );

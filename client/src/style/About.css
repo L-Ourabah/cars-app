@@ -1,7 +1,6 @@
 /* App.css (ou tout autre nom de fichier CSS de votre choix) */
 
-@import url("https://fonts.googleapis.com/css2?family=Ruthie&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 
 .contenaire-about{
 
@@ -9,15 +8,16 @@
   width: 100%;
  
   display: flex;
-  flex-direction: column;
+  
   justify-content: center;
   align-items: center;
   background: #444857;
+  gap: 15%;
 }
 .about {
   margin: 100px;
-  font-family: "Lobster", cursive;
-  font-size: 2rem;
+ 
+  font-size: 2em;
   color: gold;
   text-shadow: 1px 3px 2px #000000;
   text-align: center;
@@ -81,10 +81,14 @@ hr {
   border-radius: 50%;
 }
 
+.front .mel img{
+  width: 50%;
+}
+
 .front h1 {
   font-weight: normal;
-  font-size: 3rem;
-  font-family: "Ruthie", cursive;
+  font-size: 3em;
+ 
   text-shadow: 2px 4px 2px #893c01;
   color: gold;
 }
@@ -107,7 +111,7 @@ hr {
   background-position: left;
   background-size: 200% 100%;
   text-align: center;
-  font-family: "Lobster", cursive;
+ 
 }
 
 .container-info {
@@ -123,21 +127,8 @@ h3 {
   font-weight: normal;
 }
 
-/*Social Icons*/
-.container-social {
-  font-size: 2rem;
-  cursor: pointer;
-}
 
-.fab {
-  color: #ffca38;
-  transition: all 0.5s;
-}
 
-.fab.fa-discord {
-  position: relative;
-  top: 2px;
-}
 
 /*Transition Config*/
 .front,
@@ -173,22 +164,32 @@ hr,
   width: 90%;
 }
 
-.card-pro .fab:hover {
-  transform: scale(1.2);
+@media (max-width:760px) {
+  .contenaire-about {
+    flex-direction: column;
 }
-
-.card-pro .fa-linkedin:hover {
-  color: #004182;
+.card-pro {
+  position: relative;
+  width: 200px;
+  height: 250px;
+  margin-top: 15%;
+  margin-bottom: 15%;
 }
-
-.card-pro .fa-github-square:hover {
-  color: white;
+.front h1 {
+  font-weight: normal;
+  font-size: 1.5em;
+ 
+  text-shadow: 2px 4px 2px #893c01;
+  color: gold;
 }
+.container-info p{
+  font-size: 0.8em;
 
-.card-pro .fa-youtube-square:hover {
-  color: #FF0000;
 }
-
-.card-pro .fa-discord:hover {
-  color: #6F85D5;
+.back {
+ 
+  background-size: 100% 500%;
+  text-align: center;
+ 
+}
 }

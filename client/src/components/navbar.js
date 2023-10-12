@@ -1,6 +1,8 @@
 import '../style/navbar.css';
 import { Link, useNavigate } from 'react-router-dom';
 
+import CarsLogo from '../images/CarsLogo.gif'
+
 // Pour la barre de navigation en mobile
 import { useDispatch } from 'react-redux';
 import { showSidebar } from '../redux-store/actions/sidebar-action';
@@ -13,6 +15,7 @@ import { AuthContext } from '../context/AuthContext.js';
 import { FcAutomotive } from 'react-icons/fc';
 import { FaUser } from 'react-icons/fa';
 import { FcAbout } from 'react-icons/fc';
+
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiLogoutCircleRFill } from 'react-icons/ri';
@@ -40,7 +43,7 @@ export default function Navbar() {
 
             <div className="navbar-wrapper">
 
-                <Link className="logo-book" to="/">CarApp</Link>
+                <Link className="logo-book" to="/"> <img src={CarsLogo} alt="" /></Link>
 
 
 

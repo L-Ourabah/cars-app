@@ -16,7 +16,16 @@
     /* background-color: black; */
 }
 
-.navbar {}
+.navbar {
+    padding: 1%;
+    background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
+}
+.navbar.color > div > a > img{
+    width: 95px;
+    height: 95px;
+    border: none;
+    border-radius: 50%;
+}
 
 .navbar-wrapper {
     display: flex;

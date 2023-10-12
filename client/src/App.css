@@ -8,6 +8,14 @@
     margin: 0;
     padding: 0;
 }
-h1{
-    font-size: 'Bebas Neue';
+#root{
+    height: 100%;
+}
+/* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
+h1 ,h2,h3,h4,h5{
+    font-family: 'Bebas Neue',sans-serif ;
+}
+
+p{
+    font-family: 'Autour One';
 }

@@ -82,3 +82,53 @@
     background-color: #a51222; /* Couleur du bouton au survol */
   }
   
+
+ 
+
+  
+  section .box1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
+  }
+  
+  .box2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    /* background-attachment: fixed; */
+  }
+  
+  .box3 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1562911791-c7a97b729ec5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=937&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    background-attachment: fixed;
+  }
+  
+  .box4 {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: none;
+    /* background-attachment: fixed; */
+  }
+  
+  @media screen and (max-width: 650px) {
+    header {
+      text-align: center;
+    }
+  }
+  
