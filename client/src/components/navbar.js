@@ -49,7 +49,7 @@ export default function Navbar() {
 
                 <div className="navbar-content">
 
-                
+
 
 
                     {currentUser && currentUser.role === "admin" ? <Link className="navbar-links" to="/admin/gestion"><AiFillSetting /></Link> : ""}

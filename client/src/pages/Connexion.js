@@ -38,9 +38,10 @@ export const Connexion = () => {
         try {
             await login(inputsConnect);
             console.log("Vous êtes connecté !");
-            navigate("/admin/gestion");
+            navigate("/");
         } catch (err) {
             setConnectError("Une erreur s'est produite lors de la connexion : " + err);
+            console.log(err)
         }
     };
 

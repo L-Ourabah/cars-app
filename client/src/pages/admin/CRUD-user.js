@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 import '../../style/Admin.css'
@@ -7,8 +7,8 @@ import '../../style/Admin.css'
 
 const AddUserForm = () => {
     const [input, setInput] = useState({
-        username: "",
-        email: "",
+        username: "test",
+        email: "test",
         password: ""
     })
     const [message, setMessage] = useState("")
@@ -18,11 +18,11 @@ const AddUserForm = () => {
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("/enregistrer", input)
+            await axios.post("/enregistrer", input)
             window.location.reload()
         }
         catch (err) {
-            setMessage("An error occured")
+            setMessage("Utilisateur déjà existant")
         }
     }
     return (
@@ -59,22 +59,23 @@ const DisplayAllUser = () => {
         console.log('user id = ' + id)
         try {
             await axios.delete("/users/" + id)
+            window.location.reload();
             console.log("Deleted")
         }
         catch (err) {
             console.log(err)
         }
     }
-    console.log(data)
+    // console.log(data)
     return (
         <div className="liste-users">
 
             {data[0] ? data.map(user => (
                 <div className="user-unique" key={user.iduser} >
-                    <h4>{user.username}</h4>
-                    <p>{user.email}</p>
+                    <h4>username : {user.username}</h4>
+                    <p>email : {user.email}</p>
                     <button className='delete' onClick={() => handleDelete(user.iduser)}>Delete</button>
-                    <button className='update'><Link to={`/admin/gestion/` + user.iduser} >Update</Link></button>
+                    <button className='update'><Link to={`/admin/gestion/users/` + user.iduser} >Update</Link></button>
                 </div>
             )) : ''}
 

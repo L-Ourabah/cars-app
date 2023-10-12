@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import express from 'express';
 import { enregistrer, login, logout } from './controllers/authentification.js';
 import { modifierUtilisateur, montrerUnUtilisateur, montrerUtilisateur, nouvelUtilisateur, supprimerUtilisateur } from './controllers/CRUD-user.js';
-import { modifierVoiture, montrerVoiture, montrerVoitures } from './controllers/CRUD-voiture.js';
+import { modifierVoiture, montrerVoiture, montrerVoitures, nouvelVoiture, supprimerVoiture } from './controllers/CRUD-voiture.js';
 
 
 export const db = mysql.createConnection({
@@ -39,12 +39,11 @@ export function createBackend(port) {
     app.delete("/server/users/:id", supprimerUtilisateur)
 
     // CRUD VOITURES - CATEGORIE + SOUS CATEGORIE 2
-    // 4 * CATEGORIES
-    // PAR VOITURE - MONTRER INFO D'UNE VOIUTRE
-    // MONTRER
     app.get("/server/cars", montrerVoitures)
+    app.post("/server/cars", nouvelVoiture)
     app.get("/server/cars/:id", montrerVoiture)
     app.put("/server/cars/:id", modifierVoiture)
+    app.delete("/server/cars/:id", supprimerVoiture)
 
     // AUTHENTIFICATION - LOGIN / LOGOUT / REGISTER
     app.post("/server/enregistrer", enregistrer)
