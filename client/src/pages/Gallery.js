@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Card from './Card';
 import axios from 'axios';
-import '../style/Gallery.css';
+import '../style/Gallery.css'; // Importation des feuilles de style
 
 export default function Gallery() {
-    const [searchQuery, setSearchQuery] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
-    const [top10Cars, setTop10Cars] = useState([]);
+    const [searchQuery, setSearchQuery] = useState(''); // État local pour la requête de recherche
+    const [searchResults, setSearchResults] = useState([]); // État local pour stocker les résultats de la recherche
+    const [top10Cars, setTop10Cars] = useState([]); // État local pour stocker les 10 premières voitures
 
     useEffect(() => {
         // Récupérez les dix premières voitures au démarrage
@@ -29,7 +29,7 @@ export default function Gallery() {
                 console.error('Erreur lors de la récupération des données de recherche : ', error);
             });
     }, [searchQuery]);
-  console.log(top10Cars)
+
     return (
         <div className='contenaire-gallery'>
             <h1>Gallery</h1>
@@ -37,20 +37,21 @@ export default function Gallery() {
                 type="text"
                 placeholder="Rechercher par nom, type, marque ou année"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)} // Gérer les modifications de la requête de recherche
             />
             <div className="card-container">
-                {searchResults.length > 0 && top10Cars[0] && searchResults[0]? (
+                {searchResults.length > 0 && top10Cars[0] && searchResults[0] ? (
+                    // Affichez les résultats de la recherche si la recherche est effectuée et qu'il y a des résultats
                     searchResults.map((car) => (
-                        <Card key={car.id} car={car} />
+                        <Card key={car.id} car={car} /> // Affichez chaque voiture sous forme de carte
                     ))
                 ) : (
+                    // Sinon, affichez les 10 premières voitures
                     top10Cars.map((car) => (
-                        <Card key={car.id} car={car} />
+                        <Card key={car.id} car={car} /> // Affichez chaque voiture sous forme de carte
                     ))
                 )}
             </div>
         </div>
     );
 }
-

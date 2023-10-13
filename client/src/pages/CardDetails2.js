@@ -67,7 +67,7 @@ export default function CarDetails() {
             <div className="navigation">
             {/* Bouton de retour vers la page de recherche */}
             <button className="back-button" onClick={() => navigate1(-1)}>Précédent</button>
-            <button className="home-button" onClick={() => navigate1('/')}>Accueil</button>
+            <button className="home-button" onClick={() => navigate('/')}>Accueil</button>
           
           </div>
 

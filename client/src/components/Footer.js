@@ -15,7 +15,7 @@ function Footer() {
         About
     </Link>
     <Link to="/gallery" className="footer-links">
-        Contact
+        Gallery
     </Link>
 </div>
         

@@ -2,50 +2,57 @@ import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import axios from "axios"
 
+// Composant pour gérer la mise à jour d'un utilisateur unique
 export const CrudOneUser = () => {
-
-    const [data, setData] = useState({})
+    const [data, setData] = useState({}); // État local pour stocker les données de l'utilisateur
     const [user, setUser] = useState({
         username: "",
         password: "",
         email: ""
-    })
+    });
 
-    const location = useLocation()
-    const getId = location.pathname.split("/")[4]
+    const location = useLocation();
+    const getId = location.pathname.split("/")[4]; // Extraire l'ID de l'URL
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    // Récupérer les données de l'utilisateur à mettre à jour
     useEffect(() => {
         const getData = async () => {
             try {
-                const res = await axios.get("/users/" + getId)
-                setData(res.data[0])
+                const res = await axios.get("/users/" + getId);
+                setData(res.data[0]);
                 setUser({
                     username: res.data[0].username,
                     password: res.data[0].password,
                     email: res.data[0].email
-                })
+                });
             }
             catch (err) {
-                console.log(err)
+                console.log(err);
             }
         }
         getData();
-    }, [getId])
+    }, [getId]);
+
+    // Gérer les modifications des champs du formulaire
     const handleChange = (e) => {
-        setUser(prev => ({ ...prev, [e.target.name]: e.target.value }))
+        setUser(prev => ({ ...prev, [e.target.name]: e.target.value }));
     }
+
+    // Gérer la mise à jour de l'utilisateur
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            await axios.put("/users/" + getId, user)
-            console.log("update unique user SUCCESSS")
-            navigate("/admin/gestion")
+            await axios.put("/users/" + getId, user); // Envoyer une requête PUT pour mettre à jour l'utilisateur
+            console.log("Mise à jour de l'utilisateur réussie");
+            navigate("/admin/gestion"); // Rediriger vers la page de gestion des utilisateurs
         }
         catch (err) {
-            console.log(err)
+            console.log(err);
         }
     }
+
     return (
         <div className="contenaire-u">
             <div className="single-user-form">
@@ -61,8 +68,9 @@ export const CrudOneUser = () => {
     )
 }
 
+// Composant pour gérer la mise à jour d'une voiture unique
 export const CrudOneCar = () => {
-    const [info, setInfo] = useState({})
+    const [info, setInfo] = useState({}); // État local pour stocker les données de la voiture
     const [inputs, setInputs] = useState({
         type: "",
         name: "",
@@ -80,18 +88,18 @@ export const CrudOneCar = () => {
         vitesse_max: 0,
         zero_cent: 0,
         poids: 150
-    })
+    });
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const location = useLocation();
-    const getCarId = location.pathname.split("/")[4]
-    // console.log(carId)
+    const getCarId = location.pathname.split("/")[4]; // Extraire l'ID de la voiture depuis l'URL
+
+    // Récupérer les données de la voiture à mettre à jour
     useEffect(() => {
         const fetchInfoCar = async () => {
             try {
-                const res = await axios.get("/cars/" + getCarId)
-                setInfo(res.data[0])
-                console.log(res.data[0])
+                const res = await axios.get("/cars/" + getCarId);
+                setInfo(res.data[0]);
                 setInputs({
                     type: res.data[0].type,
                     name: res.data[0].name,
@@ -109,31 +117,36 @@ export const CrudOneCar = () => {
                     vitesse_max: res.data[0].vitesse_max,
                     zero_cent: res.data[0].zero_cent,
                     poids: res.data[0].poids
-                })
+                });
             }
             catch (err) {
-                // console.log("erreur affichage car")
-                console.log(err)
+                console.log(err);
             }
         };
-        fetchInfoCar()
-    }, [getCarId])
+        fetchInfoCar();
+    }, [getCarId]);
+
+    // Gérer les modifications des champs du formulaire
     const handleChange = (e) => {
-        setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }))
+        setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
     }
+
+    // Gérer la mise à jour de la voiture
     const handleClick = async (e) => {
-        e.preventDefault()
+        e.preventDefault();
         try {
-            await axios.put("/cars/" + getCarId, inputs)
-            navigate("/admin/gestion")
+            await axios.put("/cars/" + getCarId, inputs); // Envoyer une requête PUT pour mettre à jour la voiture
+            navigate("/admin/gestion"); // Rediriger vers la page de gestion des voitures
         }
         catch (err) {
-            console.log(err)
+            console.log(err);
         }
     }
+
     return (
         <div>
             <div className="upcar">
+                {/* Champs de formulaire pour les données de la voiture à mettre à jour */}
                 <label>Type : </label>
                 <input placeholder="type" defaultValue={info.type} name="type" type="text" onChange={handleChange} />
                 <label>Name : </label>
