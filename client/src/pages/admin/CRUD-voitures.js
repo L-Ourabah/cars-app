@@ -1,10 +1,9 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
+import axios from "axios"
+import { Link } from "react-router-dom"
 
-// Composant pour ajouter une nouvelle voiture
 const AddCarForm = () => {
-    // État local pour stocker les données du formulaire
+
     const [inputs, setInputs] = useState({
         type: "",
         name: "",
@@ -22,101 +21,104 @@ const AddCarForm = () => {
         vitesse_max: 0,
         zero_cent: 0,
         poids: 150
-    });
-
-    // Gérer les modifications des champs du formulaire
+    })
     const handleChange = (e) => {
-        setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }));
+        setInputs(prev => ({ ...prev, [e.target.name]: e.target.value }))
     }
-
-    // Gérer l'ajout d'une nouvelle voiture
     const handleClick = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("/cars", inputs); // Envoyer une requête POST pour ajouter la nouvelle voiture
-            console.log("Une nouvelle voiture a été ajoutée avec succès !");
+            await axios.post("/cars", inputs)
+            // window.location.reload()
+            console.log("woah une nouvelle voiture, le chemin de la richesse")
         }
         catch (err) {
-            console.log(err);
+            console.log(err)
         }
-    }
 
+    }
+    console.log(inputs)
     return (
         <div className="add-car-form">
             <h4>Ajouter une nouvelle voiture</h4>
             <form className="form-car">
-                {/* Champs de formulaire pour les données de la voiture */}
-                <input placeholder="Type" name="type" type="text" onChange={handleChange} />
-                <input placeholder="Nom" name="name" type="text" onChange={handleChange} />
-                <input placeholder="Marque" name="brand" type="text" onChange={handleChange} />
-                <input placeholder="Année" name="year" type="number" onChange={handleChange} />
-                {/* ... Ajouter des champs supplémentaires ici */}
+                <input placeholder="type" name="type" type="text" onChange={handleChange} />
+                <input placeholder="name" name="name" type="text" onChange={handleChange} />
+                <input placeholder="brand" name="brand" type="text" onChange={handleChange} />
+                <input placeholder="year" name="year" type="number" onChange={handleChange} />
+                <input placeholder="url image" name="image" type="text" onChange={handleChange} />
+                <input placeholder="url logo" name="logo" type="text" onChange={handleChange} />
+                <input placeholder="information" name="information" type="text" onChange={handleChange} />
+                <input placeholder="classement" name="classement" type="number" onChange={handleChange} />
+                <input placeholder="description" name="description" type="text" onChange={handleChange} />
+                <input placeholder="url video" name="video" type="text" onChange={handleChange} />
+                <input placeholder="exemplaire" name="exemplaire" type="number" onChange={handleChange} />
+                <input placeholder="puissance" name="puissance" type="number" onChange={handleChange} />
+                <input placeholder="prix" name="prix" type="number" onChange={handleChange} />
+                <input placeholder="vitesse max" name="vitesse_max" type="number" onChange={handleChange} />
+                <input placeholder="zero à cent" name="zero_cent" type="number" onChange={handleChange} />
+                <input placeholder="poids" name="poids" type="number" onChange={handleChange} />
                 <button className="form-user button" onClick={handleClick}>Valider</button>
             </form>
         </div>
-    );
+    )
 }
-
-// Composant pour afficher toutes les voitures existantes et permettre de les supprimer
 const DisplayAllCars = () => {
-    const [data, setData] = useState({});
+    const [data, setData] = useState({})
 
-    // Récupérer toutes les voitures depuis l'API
     useEffect(() => {
         const fetchAllCars = async () => {
             try {
-                const res = await axios.get("/cars");
-                setData(res.data);
+                const res = await axios.get("/cars")
+                setData(res.data)
             }
             catch (err) {
-                console.log(err);
+                console.log(err)
             }
         };
         fetchAllCars();
-    }, []);
+    }, [])
+    console.log(data)
 
-    // Gérer la suppression d'une voiture
     const handleDelete = async (id) => {
         try {
-            await axios.delete("/cars/" + id); // Envoyer une requête DELETE pour supprimer la voiture
-            window.location.reload(); // Recharger la page pour refléter les changements
-            console.log("Voiture supprimée avec succès !");
+            await axios.delete("/cars/" + id)
+            window.location.reload()
+            console.log("VOITURE SUPPRIMEE")
         }
         catch (err) {
-            console.log(err);
+            console.log(err)
         }
+        // window.location.reload()
     }
 
     return (
         <div className="liste-cars">
-            {/* Afficher la liste de toutes les voitures avec des boutons de suppression et de mise à jour */}
             {data[0] ? data.map(car => (
                 <div className="car-unique" key={car.id}>
-                    <h4>Nom : {car.name}</h4>
+                    <h4>Name : {car.name}</h4>
                     <p>Type : {car.type}</p>
-                    <p>Marque : {car.brand}</p>
+                    <p>Brand : {car.brand}</p>
                     <p>Poids : {car.poids}</p>
                     <p>Année : {car.year}</p>
                     <p>Classement : {car.classement}</p>
-                    {/* Boutons pour supprimer ou mettre à jour chaque voiture */}
-                    <button className="delete" onClick={() => handleDelete(car.id)}>Supprimer</button>
-                    <button className="update"><Link to={`/admin/gestion/cars/` + car.id}>Mise à jour</Link></button>
+                    <button className="delete" onClick={() => handleDelete(car.id)}>Delete</button>
+                    <button className="update"><Link to={`/admin/gestion/cars/` + car.id}>Update</Link></button>
                 </div>
-            )) : ""}
+            )
+            ) : ""}
         </div>
     )
 }
 
-// Composant de plus haut niveau qui regroupe les deux composants précédents
 export const CrudVoitures = () => {
     return (
         <div className="voiture">
             <h2>Gérer les voitures</h2>
 
-            {/* Afficher le formulaire d'ajout de voiture et la liste des voitures existantes */}
             <AddCarForm />
+
             <DisplayAllCars />
         </div>
     )
 }
-
