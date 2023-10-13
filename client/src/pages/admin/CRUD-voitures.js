@@ -113,8 +113,8 @@ const DisplayAllCars = () => {
 
 export const CrudVoitures = () => {
     return (
-        <div className="voitures">
-            <h1>Gérer les voitures</h1>
+        <div className="voiture">
+            <h2>Gérer les voitures</h2>
 
             <AddCarForm />
 

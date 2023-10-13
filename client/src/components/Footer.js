@@ -1,18 +1,23 @@
 import React from 'react';
 import '../style/Footer.css'; // Assurez-vous d'importer le CSS approprié ici
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer>
       <div className="footer-contenaire"> 
          
-          <div className="link-des">
-            <a href="#" className="footer-links">Home</a>
-            <a href="#" className="footer-links">About</a>
-            
-            
-            <a href="#" className="footer-links">Contact</a>
-          </div>
+      <div className="link-des">
+    <Link to="/" className="footer-links">
+        Home
+    </Link>
+    <Link to="/about" className="footer-links">
+        About
+    </Link>
+    <Link to="/gallery" className="footer-links">
+        Contact
+    </Link>
+</div>
         
 
       

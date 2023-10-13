@@ -133,7 +133,7 @@ export const CrudOneCar = () => {
     }
     return (
         <div>
-            <div>
+            <div className="upcar">
                 <label>Type : </label>
                 <input placeholder="type" defaultValue={info.type} name="type" type="text" onChange={handleChange} />
                 <label>Name : </label>

@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
 /* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
-h1 ,h2,h3,h4,h5{
-    font-family: 'Bebas Neue',sans-serif ;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
-p{
-    font-family: 'Autour One',sans-serif;
+p {
+  font-family: 'Autour One', sans-serif;
 }
 
 
@@ -13,93 +18,92 @@ p{
 
 /* Styles généraux */
 .log {
-    height: 100vh;
-    background-color: #6d6060;
-     padding: 5%;
-  }
-  
+  height: 100vh;
+  background-color: #391e3f;
+  padding: 5%;
+}
+
+.connexion {
+  background-color: #fff;
+  max-width: 400px;
+
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 5% auto;
+
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+/* Styles pour les onglets */
+.onglets {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.onglet {
+  padding: 10px 20px;
+  background-color: #ccc;
+  cursor: pointer;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin: 0 10px;
+  color: #333;
+}
+
+.onglet.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Styles pour les formulaires */
+.connexion form {
+  display: flex;
+  flex-direction: column;
+}
+
+.connexion label {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.connexion input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .connexion {
-    background-color: #fff;
-    max-width: 400px;
-  
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    margin: 5% auto;
-   
+    max-width: 100%;
   }
-  
-  h1 {
-    text-align: center;
-    font-size: 24px;
-    margin: 0;
-    color: #333;
-  }
-  
-  /* Styles pour les onglets */
+
   .onglets {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-  }
-  
-  .onglet {
-    padding: 10px 20px;
-    background-color: #ccc;
-    cursor: pointer;
-    border: 1px solid #aaa;
-    border-radius: 5px;
-    margin: 0 10px;
-    color: #333;
-  }
-  
-  .onglet.active {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  /* Styles pour les formulaires */
-  form {
-    display: flex;
     flex-direction: column;
   }
-  
-  label {
+
+  .onglet {
     margin: 10px 0;
-    font-weight: bold;
-    color: #333;
   }
-  
-  input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 5px 0;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .connexion {
-      max-width: 100%;
-    }
-  
-    .onglets {
-      flex-direction: column;
-    }
-  
-    .onglet {
-      margin: 10px 0;
-    }
-  }
-  
+}

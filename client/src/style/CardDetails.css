@@ -3,7 +3,7 @@
 
 
 .details {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -28,7 +28,7 @@
 .title {
   font-size: 24px;
   font-weight: bold;
-  color: #d1192e;
+
   margin-bottom: 10px;
   display: flex;
   justify-content: space-evenly;
@@ -36,13 +36,11 @@
 }
 
 .logo2 {
-  width: 10%;
- 
+  width: 10%; 
 
 }
 
 .img-logo2 {
-
   width: 100%;
 }
 
@@ -65,7 +63,7 @@
 
 .info {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
 }
 
@@ -76,6 +74,9 @@
 
 .sous-info{
   color: blue;
+}
+.title2 h2{
+  font-size: 2em;
 }
 
 .contenu-video {

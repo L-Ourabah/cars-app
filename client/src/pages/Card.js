@@ -51,23 +51,43 @@ export default function Card({ car }) {
           ? (
             <div className="set-details" key={car.id}>
 
-              <div className="cost">
+             
+
                 <div className="cost-info">
-                  <h2> vitesse max</h2>
-                  <p>{car.vitesse_max}</p>
+
+                  <div>
+                    <h2> vitesse max</h2>
+                  </div>
+
+                  <div>
+                    <p>{car.vitesse_max}</p>
+                  </div>
+
                 </div>
 
                 <div className="cost-info">
-                  <h2> 0 à 100</h2>
-                  <p>{car.zero_cent} s</p>
+
+                  <div>
+                    <h2> 0 à 100</h2>
+                  </div>
+
+                  <div>
+                    <p>{car.zero_cent} s</p>
+                  </div>
+
                 </div>
 
                 <div className="cost-info">
-                  <h2> poids</h2>
-                  <p>{car.poids} kg</p>
+                  <div>
+
+                    <h2> poids</h2>
+                  </div>
+                  <div>
+                    <p>{car.poids} kg</p>
+                  </div>
 
                 </div>
-              </div>
+              
             </div>
           ) : ''}
       </div>
@@ -76,21 +96,27 @@ export default function Card({ car }) {
         {car
           ? (
             <div className="set-info" key={car.id}>
+
+
               <div className="cost-info">
+
                 <div >
                   <h2> exemplaire</h2>
                 </div>
+
                 <div >
                   <p>{car.exemplaire} pc</p>
                 </div>
+
               </div>
               <div className="cost-info"></div>
 
               <div className="cost-info">
-                <div >
 
+                <div >
                   <h2> puissance</h2>
                 </div>
+
                 <div >
                   <p>{car.puissance} cv</p>
                 </div>

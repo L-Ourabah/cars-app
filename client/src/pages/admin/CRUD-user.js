@@ -88,7 +88,7 @@ const CrudUser = () => {
 
     return (
         <div className='utilisateur'>
-            <h1>Gérer les utilisateurs</h1>
+            <h2>Gérer les utilisateurs</h2>
 
             < AddUserForm />
             < DisplayAllUser />

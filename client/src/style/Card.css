@@ -147,10 +147,7 @@ p{
 /******************* Styles pour le cardset de la carte  */
 
 .card-set  {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+   
     margin-top: 5%;
     background-color: #7fffd43b;
     width: 90%;
@@ -159,7 +156,7 @@ p{
 }
 .set-details{
     display: flex;
-    flex-direction: column;
+  
     justify-content: space-evenly;
     padding: 0 0 3%;
     align-items: center;
@@ -180,22 +177,14 @@ p{
 }
 /* Styles pour info */
 .card-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+
     margin-top: 5%;
     background-color: #7fffd43b;
     width: 90%;
     border-radius: 5px;
 }
 
-.card-info .exemplaire, .puissance, .prix {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 0.04cm;
-}
+
 
 .card-info .label {
     font-weight: 600;
@@ -210,7 +199,7 @@ p{
 }
 .set-info{
     display: flex;
-    flex-direction: column;
+    
     justify-content: space-evenly;
     padding: 0 0 3%;
     align-items: center;
@@ -237,7 +226,14 @@ p{
 .card-footer .cost {    
     color: red;
 }
-
+.contenaire-gallery > input[type=text]{
+    margin: auto;
+    width: 22%;
+    padding: 1%;
+    margin-left: 10%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
 @media (max-width:760px) {
     /* Styles pour la carte  */
 .card {

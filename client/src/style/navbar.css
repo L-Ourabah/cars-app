@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Autour+One&family=Bebas+Neue&display=swap');
+
 /* Définition de la taille de la police en pourcentage (1rem équivaut à 10 pixels) */
-h1 ,h2,h3,h4,h5{
-    font-family: 'Bebas Neue',sans-serif ;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bebas Neue', sans-serif;
 }
 
-p{
-    font-family: 'Autour One',sans-serif;
+p {
+    font-family: 'Autour One', sans-serif;
 }
 
 
@@ -31,7 +36,8 @@ p{
     padding: 1%;
     background-image: linear-gradient(90deg, rgba(39, 27, 111, 1) 0%, rgba(87, 25, 45, 1) 100%);
 }
-.navbar.color > div > a > img{
+
+.navbar.color>div>a>img {
     width: 95px;
     height: 95px;
     border: none;

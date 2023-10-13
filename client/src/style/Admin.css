@@ -15,7 +15,48 @@ p {
     font-family: 'Autour One', sans-serif;
 }
 
+body {
+    background-color: #391e3f;
+}
 
+.utilisateur,
+.voiture {
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-bottom: 3%;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.upcar {
+    display: flex;
+    flex-direction: column;
+    width: 39%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    margin-bottom: 3%;
+
+    background: wheat;
+    padding: 3%;
+    margin-top: 4%;
+    border-radius: 15px;
+}
+
+.form-car {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
 
 /* Styles pour les formulaires d'ajout et de mise à jour d'utilisateur */
 .form-user,
@@ -59,13 +100,26 @@ p {
 }
 
 /* Styles pour la liste des utilisateurs */
-.liste-users,
-.liste-cars {
+.liste-users {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 10px;
 }
+.liste-cars{
+   
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* align-items: center; */
+    margin-left: 3%;
+    margin-bottom: 2%;
+    margin-right: 3%;
 
+}
+.car-unique{
+    margin-top: 3%;
+    width: 35%;
+}
 .user-unique,
 .car-unique {
     background-color: #fff;
@@ -115,14 +169,14 @@ h2 {
     text-align: center;
     font-size: 24px;
     margin: 20px 0;
-    color: #333;
+    color: #ffffff;
 }
 
 .contenaire-u {
     display: flex;
     justify-content: center;
     height: 73vh;
-    background: #fff;
+    background: #391e3f;
 
 }
 
@@ -161,7 +215,7 @@ h2 {
     }
 
     .admin {
-        height: 100vh;
+
         /* width: 100%; */
         display: flex;
         flex-direction: column;
@@ -175,4 +229,22 @@ h2 {
     .contenaire-u {
         height: 75vh;
     }
+
+    .upcar {
+        width: 78%;
+        margin-bottom: 7%;
+        margin-top: 7%;
+
+    }
+
+    .car-unique{
+       
+        width: 60%;
+    }
+    .add-car-form {
+        width: 70%;
+        margin: 0 auto;
+        margin-bottom: 3%;
+    }
+
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import '../style/Error.css';
+import { Link } from "react-router-dom";
+
 const Error = () => {
   return (
     <div>
@@ -12,7 +14,8 @@ const Error = () => {
           <h1>404</h1>
           <h2>PAGE NOT FOUND</h2>
           <h3>BACK TO HOME?</h3>
-          <a href="#" className="yes">YES</a>
+       
+          <Link to="/" className="yes">YES</Link>
           <a href="https://www.youtube.com/watch?v=G3AfIvJBcGo">NO</a>
         </div>
       </section>

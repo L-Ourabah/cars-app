@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import '../style/CardDetails.css'
 import ReactPlayer from 'react-player';
 import axios from 'axios'; // Importez Axios
 
 export default function CarDetails() {
+    const navigate = useNavigate();
+
     const { id } = useParams();
     const [car, setCar] = useState(null);
 
@@ -60,6 +62,12 @@ console.log(car)
                     />
                 </div>
             </div>
+            <div className="navigation">
+            {/* Bouton de retour vers la page de recherche */}
+            <button className="back-button" onClick={() => navigate(-1)}>Précédent</button>
+            <button className="home-button" onClick={() => navigate('/')}>Accueil</button>
+          
+          </div>
         </div>
     );
 }

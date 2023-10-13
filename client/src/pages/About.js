@@ -7,7 +7,10 @@ import melanie from '../images/melanie1.jpeg';
 
 function About() {
   return (
+    <div >
+  <h1 className='jedi'>Designer</h1>
     <div className="contenaire-about">
+      
       <div className="card-pro">
         <div className="front">
           <div className="star">
@@ -16,7 +19,7 @@ function About() {
 
           <img src={ourabah} alt="logo" />
 
-          <h1>ourabah</h1>
+          <h2>ourabah</h2>
         </div>
 
         <div className="back">
@@ -40,7 +43,7 @@ function About() {
 
           <img src={melanie} alt="logo" />
 
-          <h1>Melanie</h1>
+          <h2>Melanie</h2>
         </div>
 
         <div className="back">
@@ -55,7 +58,7 @@ function About() {
         </div>
       </div>
 
-    </div>
+    </div></div>
   );
 }
 

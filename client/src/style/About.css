@@ -15,7 +15,7 @@ p{
    display: flex;
     justify-content: center;
   align-items: center;
-  background-color: #6d6060;
+  background-color: #391e3f;
   gap: 15%;
 }
 .about {
@@ -49,8 +49,11 @@ hr {
   position: relative;
   width: 300px;
   height: 400px;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.title2{
+  font-size: 2em;
 }
 
 .front,
@@ -88,7 +91,7 @@ hr {
   width: 50%;
 }
 
-.front h1 {
+.front h2 {
   font-weight: normal;
   font-size: 3em;
   text-shadow: 2px 4px 2px #893c01;
@@ -134,6 +137,11 @@ h3 {
   
   font-weight: normal;
   font-family:  'Bebas Neue',sans-serif ; ;
+}
+.jedi{
+  padding-top: 3%;
+  font-size: 3em;
+  color: white;
 }
 
 
@@ -184,7 +192,7 @@ hr,
   margin-top: 15%;
   margin-bottom: 15%;
 }
-.front h1 {
+.front h2 {
   font-weight: normal;
   font-size: 1.5em;
  

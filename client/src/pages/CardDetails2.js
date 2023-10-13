@@ -4,6 +4,7 @@ import CardData from './CardData';
 import '../style/CardDetails.css'
 import ReactPlayer from 'react-player'
 
+
 export default function CarDetails() {
 
     const navigate = useNavigate();
@@ -65,8 +66,8 @@ export default function CarDetails() {
             </div>
             <div className="navigation">
             {/* Bouton de retour vers la page de recherche */}
-            <button className="back-button" onClick={() => navigate(-1)}>Précédent</button>
-            <button className="home-button" onClick={() => navigate('/')}>Accueil</button>
+            <button className="back-button" onClick={() => navigate1(-1)}>Précédent</button>
+            <button className="home-button" onClick={() => navigate1('/')}>Accueil</button>
           
           </div>
 
